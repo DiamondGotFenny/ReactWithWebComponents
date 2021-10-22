@@ -110,7 +110,6 @@ button.follow-btn {
 	<div class="skills">
 		<h6>Skills</h6>
 		<ul class="skills-List">
-			
 		</ul>
 	</div>
 </div>

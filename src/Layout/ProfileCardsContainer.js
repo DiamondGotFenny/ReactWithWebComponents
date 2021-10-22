@@ -1,10 +1,9 @@
-import { mockUsersProfile } from '../mockData/mockUsersProfile';
 import CharactorCardWrapper from '../components/CharactorCardWrapper';
 
-const ProfileCardsContainer = () => {
+const ProfileCardsContainer = ({ contacts }) => {
   return (
     <div className="cards-container">
-      {mockUsersProfile.map((charactor) => (
+      {contacts.map((charactor) => (
         <CharactorCardWrapper key={charactor.id} CardData={charactor} />
       ))}
     </div>

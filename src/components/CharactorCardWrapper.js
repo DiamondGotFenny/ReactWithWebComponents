@@ -29,7 +29,7 @@ const CharactorCardWrapper = ({ CardData }) => {
         cardMessageChange
       );
     };
-  }, []);
+  }, [CardData]);
   console.log(cardMessage);
   return <character-card ref={charactorCard}></character-card>;
 };
