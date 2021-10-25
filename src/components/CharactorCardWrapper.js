@@ -8,6 +8,10 @@ const CharactorCardWrapper = ({ CardData }) => {
     const message = e.detail.message;
     setCardMessage(message);
   };
+  const cardFollowMessage = (e) => {
+    const id = e.detail.id;
+    setCardMessage(id);
+  };
   useEffect(() => {
     charactorCard.current.cardValues = CardData;
     charactorCard.current.populateCard();
@@ -17,7 +21,7 @@ const CharactorCardWrapper = ({ CardData }) => {
     );
     charactorCard.current.addEventListener(
       'follow-button-click',
-      cardMessageChange
+      cardFollowMessage
     );
     return () => {
       charactorCard.current.removeEventListener(
@@ -26,7 +30,7 @@ const CharactorCardWrapper = ({ CardData }) => {
       );
       charactorCard.current.removeEventListener(
         'follow-button-click',
-        cardMessageChange
+        cardFollowMessage
       );
     };
   }, [CardData]);

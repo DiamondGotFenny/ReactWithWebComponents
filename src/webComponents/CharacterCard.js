@@ -180,7 +180,7 @@ export default class CharacterCard extends HTMLElement {
         bubbles: true,
         composed: true,
         detail: {
-          message: 'Thank you for following me!',
+          id: this.cardValues.id,
         },
       })
     );
